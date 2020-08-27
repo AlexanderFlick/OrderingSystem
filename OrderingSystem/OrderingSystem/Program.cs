@@ -31,7 +31,7 @@ namespace OrderingSystem
                 try
                 {
                     var context = services.GetRequiredService<OrderingSystemContext>();
-                    context.Database.EnsureCreated();
+                    DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {
